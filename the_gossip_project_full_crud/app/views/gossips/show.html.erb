@@ -1,0 +1,5 @@
+<h2 class="text-info" style="text-align: center; padding-top: 2em;">Bienvenue sur le profil du potin n°<%= @gossip.id %></h2>
+<%= link_to "Edit", edit_gossip_path(@gossip.id), class: 'btn btn-warning'%> <%= link_to 'Clique pour détruire', @gossip, method: :delete, class: 'btn btn-danger'%>
+<h3 style="padding-top: 2em;">Createur du potin <%= @gossip.user.name %></h3>
+<p>Titre : <%= @gossip.title %></p>
+<p>Contenu : <%= @gossip.content %></p>

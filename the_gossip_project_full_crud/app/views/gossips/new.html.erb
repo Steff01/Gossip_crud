@@ -1,0 +1,15 @@
+
+<div class="container">
+    <h2 class="text-success">Page to create new gossip</h2>
+
+<%= form_with model: @gossip, url: gossips_path do |f|%>
+<p>Title</p>
+<%= f.text_field :title, class: 'form-control mb-2' %><br>
+<p>Content</p>
+<%= f.text_area :content, class: 'form-control mb-2' %><br>
+<p>User_id</p>
+<%= f.number_field :user_id, in: 1..@user_number, class: 'form-control mb-2' %><br>
+<%= f.submit "Create new gossip", class: 'btn btn-warning' %>
+<% end %>
+
+</div>
